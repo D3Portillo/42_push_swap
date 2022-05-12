@@ -32,8 +32,6 @@ get_results () {
   fi
 }
 
-trap get_results EXIT
-
 test () {
   result=$(./push_swap $1 2>/dev/null)
   echo "Input: $1"
@@ -95,3 +93,5 @@ describe "[SIZE=3] Index 0 has the greatest value"
 test "9 3 6"
 test "9 0 0"
 test "4 2 0"
+
+get_results
