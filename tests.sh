@@ -58,7 +58,7 @@ test () {
 }
 
 describe "MAKEFILE"
-make
+make re
 
 describe "[SIZE=1] Empty"
 test "1"
@@ -90,8 +90,12 @@ test "1 6 3"
 test "0 42 3"
 test "-1 0 -2"
 test "-42 42 20"
+test "0 42 0"
 
 describe "[SIZE=3] Index 0 has the greatest value"
 test "9 3 6"
 test "9 0 0"
 test "4 2 0"
+test "9999 999 -1"
+test "9999 0 0"
+
