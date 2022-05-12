@@ -6,64 +6,17 @@
 /*   By: dcerrito <dcerrito@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 02:38:13 by dcerrito          #+#    #+#             */
-/*   Updated: 2022/05/04 17:08:21 by dcerrito         ###   ########.fr       */
+/*   Updated: 2022/05/13 00:43:00 by dcerrito         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-typedef struct s_stack
+static int	handle_sort(t_stack stacks[2])
 {
-	int	*content;
-	int	size;
-}	t_stack;
-
-void	executes(char *action)
-{
-	if (action == SA || action == SS)
-		write(1, "2", 1);
-	if (action == SB || action == SS)
-		write(1, "2", 1);
-	if (action == PA)
-		write(1, "2", 1);
-	if (action == PB)
-		write(1, "2", 1);
-	if (action == RA || action == RR)
-		write(1, "2", 1);
-	if (action == RB || action == RR)
-		write(1, "2", 1);
-	if (action == RRA || action == RRR)
-		write(1, "2", 1);
-	if (action == RRB || action == RRR)
-		write(1, "2", 1);
-}
-
-void	free_stacks(t_stack stacks[2], char *error)
-{
-	free(stacks[0].content);
-	free(stacks[1].content);
-	if (error)
-	{
-		write(STDERR_FILENO, error, ft_strlen(error));
-		write(STDERR_FILENO, "\n", 1);
-		exit(EXIT_FAILURE);
-	}
-}
-
-int	is_sorted(t_stack stack)
-{
-	int	i;
-
-	i = 0;
-	while (++i < stack.size)
-		if (stack.content[i - 1] > stack.content[i])
-			return (0);
-	return (1);
-}
-
-int	handle_sort(t_stack stacks[2])
-{
-	
+	if (stacks[0].size < 6)
+		return (short_sort(stacks));
+	return (short_sort(stacks));
 }
 
 int	main(int argc, char **argv)

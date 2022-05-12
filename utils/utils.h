@@ -6,7 +6,7 @@
 /*   By: dcerrito <dcerrito@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 03:08:54 by dcerrito          #+#    #+#             */
-/*   Updated: 2022/05/02 09:40:22 by dcerrito         ###   ########.fr       */
+/*   Updated: 2022/05/13 00:42:35 by dcerrito         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,18 @@
 # define RRA "rra"
 # define RRB "rrb"
 # define RRR "rrr"
+
+typedef struct s_stack
+{
+	int	*content;
+	int	size;
+}	t_stack;
+
+void	executes(char *action, t_stack stacks[2]);
+void	free_stacks(t_stack stacks[2], char *error);
+int		is_sorted(t_stack stack);
+void	print_stack(t_stack stack);
+void	prints(char *content, int size);
+int		short_sort(t_stack stacks[2]);
 
 #endif
