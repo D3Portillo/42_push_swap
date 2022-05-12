@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/bash -e
 
 HR="----------------------------------------"
 total=0
@@ -32,8 +32,10 @@ get_results () {
   fi
 }
 
+trap get_results EXIT
+
 test () {
-  result=$(./push_swap $1)
+  result=$(./push_swap $1 2>/dev/null)
   echo "Input: $1"
   echo -n "Output: "
   if [ "$result" ]
@@ -42,7 +44,7 @@ test () {
   else
     echo "Empty"
   fi
-  checker=$(./push_swap $1 2>/dev/null | ./checker_linux $1 2>/dev/null)
+  checker=$(echo $result | ./checker_linux $1 2>/dev/null)
   echo -n "Status: "
   ((total++))
   if [[ "$checker" == "OK" || "$checker" == "" ]]
@@ -93,5 +95,3 @@ describe "[SIZE=3] Index 0 has the greatest value"
 test "9 3 6"
 test "9 0 0"
 test "4 2 0"
-
-get_results
