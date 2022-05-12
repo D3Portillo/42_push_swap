@@ -6,7 +6,7 @@
 /*   By: dcerrito <dcerrito@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 02:38:13 by dcerrito          #+#    #+#             */
-/*   Updated: 2022/05/13 00:43:00 by dcerrito         ###   ########.fr       */
+/*   Updated: 2022/05/13 00:58:34 by dcerrito         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int	main(int argc, char **argv)
 {
 	t_stack	stacks[2];
 	char	inputs[MAX_INPUT];
-	int		solved;
 	int		error_status;
 	int		i;
 

@@ -6,30 +6,37 @@
 #    By: dcerrito <dcerrito@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/02 08:06:16 by dcerrito          #+#    #+#              #
-#    Updated: 2022/05/02 08:47:33 by dcerrito         ###   ########.fr        #
+#    Updated: 2022/05/13 00:55:26 by dcerrito         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 CC = gcc
 FRM = rm -rf
-CFLAGS = -Iincludes #-Wall -Wextra -Werror -fsanitize=address -g3
+CFLAGS = -Iincludes -Wall -Wextra -Werror
 MAIN = main.c
 LIBFT = \
-	libft/ft_split.c			\
-	libft/ft_strcpy.c			\
-	libft/ft_strjoin.c		\
-	libft/ft_strlcat.c		\
-	libft/ft_strlcpy.c		\
-	libft/ft_strlen.c			\
-	libft/ft_arrlen.c			\
-	libft/ft_strnstr.c		\
-	libft/ft_substr.c	\
+	libft/ft_split.c		\
+	libft/ft_strcpy.c		\
+	libft/ft_strjoin.c	\
+	libft/ft_strlcat.c	\
+	libft/ft_strcmp.c		\
+	libft/ft_strlcpy.c	\
+	libft/ft_strlen.c		\
+	libft/ft_arrlen.c		\
+	libft/ft_strnstr.c	\
+	libft/ft_substr.c		\
 	libft/ft_isnumber.c	\
 	libft/ft_isdigit.c	\
-	libft/ft_atoi.c	\
+	libft/ft_atoi.c			\
 
 UTILS = \
+	utils/executes.c		\
+	utils/free_stacks.c	\
+	utils/is_sorted.c		\
+	utils/print_stack.c	\
+	utils/prints.c			\
+	utils/short_sort.c	\
 
 SRCS = $(LIBFT) $(UTILS) $(MAIN)
 OBJS = $(patsubst %.c, %.o, $(SRCS))

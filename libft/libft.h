@@ -6,7 +6,7 @@
 /*   By: dcerrito <dcerrito@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 03:08:54 by dcerrito          #+#    #+#             */
-/*   Updated: 2022/05/02 08:43:55 by dcerrito         ###   ########.fr       */
+/*   Updated: 2022/05/13 00:54:58 by dcerrito         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ char	*ft_substr(char const *src, unsigned int start, size_t size);
 int		ft_isnumber(const char *str);
 int		ft_isdigit(int c);
 int		ft_atoi(const char *str, int *status);
+int		ft_strcmp(char *s1, char *s2);
 
 #endif
