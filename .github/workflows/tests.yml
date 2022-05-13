@@ -11,6 +11,16 @@ on:
       - "**.md"
 
 jobs:
+  norminette:
+    steps:
+      runs-on: ubuntu-latest
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.8"
+          cache: "pip"
+      - run: pip install -r requirements.txt
+      - run: norminette .
   moulinette:
     runs-on: ubuntu-latest
     steps:
