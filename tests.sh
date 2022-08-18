@@ -99,3 +99,14 @@ test "4 2 0"
 test "9999 999 -1"
 test "9999 0 0"
 
+describe "Sorted with existent ending item"
+hundred1=$(echo -n {0..100} | cat)
+hundred2=$(echo -n {0..200} | cat)
+one_k=$(echo -n {0..1000} | cat)
+test "$hundred 100"
+test "$hundred2 99"
+test "$hundred2 2"
+test "$hundred2 0"
+test "$hundred2 50"
+test "$one_k 100"
+test "$one_k 1000"
