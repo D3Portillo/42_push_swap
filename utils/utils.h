@@ -6,7 +6,7 @@
 /*   By: dcerrito <dcerrito@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 03:08:54 by dcerrito          #+#    #+#             */
-/*   Updated: 2022/05/13 00:54:50 by dcerrito         ###   ########.fr       */
+/*   Updated: 2022/08/18 19:53:18 by dcerrito         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ int		is_sorted(t_stack stack);
 void	print_stack(t_stack stack);
 void	prints(char *content, int size);
 int		short_sort(t_stack stacks[2]);
+int		bogosort(t_stack stacks[2]);
 
 #endif
